@@ -1,11 +1,15 @@
-<table class="table">
+<div class="mb-3">
+    <div class="text-bg-dark p-3" style="text-align: center;"><b>BOOKS</b></div>
+</div>
+<div class="mb-3">
+  <table class="table">
     <thead>
       <tr>
-        <th style="text-align: center;" scope="col">Book Name</th>
-        <th style="text-align: center;" scope="col">Category</th>
-        <th style="text-align: center;" scope="col">Author</th>
-        <th style="text-align: center;" scope="col">UnıtsInStock</th>
-        <th style="text-align: center;" scope="col">Price</th>
+        <th style="text-align: left;" scope="col">Book Name</th>
+        <th style="text-align: left;" scope="col">Category</th>
+        <th style="text-align: left;" scope="col">Author</th>
+        <th style="text-align: left;" scope="col">UnıtsInStock </th>
+        <th style="text-align: left;" scope="col">Price </th>
       </tr>
     </thead>
     <tbody>
@@ -14,7 +18,9 @@
             <td style="text-align: left;">{{book.categoryName}}</td>
             <td style="text-align: left;">{{book.authorName }}</td>
             <td style="text-align: left;">{{book.unitsInStock}}</td>
-            <td style="text-align: left;">{{book.price}}</td>
+            <td style="text-align: left;">{{book.price | currency}}</td>
       </tr>
     </tbody>
   </table>
+</div>
+

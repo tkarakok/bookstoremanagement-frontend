@@ -1,0 +1,11 @@
+
+<div class="mb-3">
+    <div class="text-bg-dark p-3" style="text-align: center;"><b>AUTHORS</b></div>
+  </div>
+  
+  <div class="mb-3">
+      <ul
+      class="list-group">
+          <li *ngFor="let author of authors" class="list-group-item">{{author.firstName +" "+ author.lastName }}</li>
+        </ul>
+  </div>

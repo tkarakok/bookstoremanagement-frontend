@@ -8,6 +8,8 @@ import { BookService } from './service/book.service';
 import { BookDetailsService } from './service/book-details.service';
 import { CategoryComponent } from './components/category/category/category.component';
 import { CategoryService } from './service/category.service';
+import { AuthorComponent } from './components/author/author/author.component';
+import { AuthorService } from './service/author.service';
 
 @Component({
   selector: 'app-root',
@@ -18,12 +20,14 @@ import { CategoryService } from './service/category.service';
     NaviComponent,
     BookComponent,
     HttpClientModule,
-    CategoryComponent
+    CategoryComponent,
+    AuthorComponent
   ],
   providers:[
     BookService,
     BookDetailsService,
-    CategoryService
+    CategoryService,
+    AuthorService
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

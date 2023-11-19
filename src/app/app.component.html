@@ -1,12 +1,16 @@
-<div  class="container">
-  <app-navi></app-navi>
-  <div class="row">
-      <div class="col-md-4">
-        <app-category></app-category>
+<br>
+  <div  class="container">
+    <div class="mb-3">
+      <app-navi></app-navi>
+      <div class="row">
+          <div class="col-md-4">
+            <app-category></app-category>
+            <br>
+            <app-author></app-author>
+          </div>
+          <div class="col-md-8">
+              <router-outlet></router-outlet>
+          </div>
       </div>
-      <div class="col-md-8">
-          <router-outlet></router-outlet>
-      </div>
+    </div>
   </div>
-  
-</div>
