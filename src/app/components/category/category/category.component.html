@@ -6,6 +6,8 @@
 <div class="mb-3">
     <ul
     class="list-group">
-        <li *ngFor="let category of categories" class="list-group-item">{{category.name}}</li>
+        <li *ngFor="let category of categoryDetails" class="list-group-item" > {{category.categoryName}} 
+          <span style="text-align: right;" class="badge text-bg-primary">{{category.bookCount}}</span>
+        </li>
       </ul>
 </div>

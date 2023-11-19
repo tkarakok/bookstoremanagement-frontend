@@ -10,6 +10,7 @@ import { CategoryComponent } from './components/category/category/category.compo
 import { CategoryService } from './service/category.service';
 import { AuthorComponent } from './components/author/author/author.component';
 import { AuthorService } from './service/author.service';
+import { CategoryDetailService } from './service/category-detail.service';
 
 @Component({
   selector: 'app-root',
@@ -27,7 +28,8 @@ import { AuthorService } from './service/author.service';
     BookService,
     BookDetailsService,
     CategoryService,
-    AuthorService
+    AuthorService,
+    CategoryDetailService
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
