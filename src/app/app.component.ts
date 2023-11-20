@@ -14,6 +14,8 @@ import { CategoryDetailService } from './service/category-detail.service';
 import { RegisterComponent } from './components/register/register/register.component';
 import { RegisterService } from './service/register.service';
 import { ToastrModule } from 'ngx-toastr';
+import { LoginComponent } from './components/login/login/login.component';
+import { AppService } from './service/app.service';
 
 @Component({
   selector: 'app-root',
@@ -27,7 +29,8 @@ import { ToastrModule } from 'ngx-toastr';
     CategoryComponent,
     AuthorComponent,
     RegisterComponent,
-    ToastrModule
+    ToastrModule,
+    LoginComponent
   ],
   providers:[
     BookService,
@@ -36,11 +39,16 @@ import { ToastrModule } from 'ngx-toastr';
     AuthorService,
     CategoryDetailService,
     RegisterService,
+    AppService
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  isLogin = false;
+  appService : AppService;
   title = 'bookstoremanagement';
+
+  constructor(private appSer : AppService){
+    this.appService = appSer;
+  }
 }

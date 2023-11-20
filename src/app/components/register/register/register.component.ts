@@ -58,7 +58,7 @@ export class RegisterComponent implements OnInit {
         }
       );
     } else {
-      this.toastrService.error('Please fill all the fields');
+      this.toastrService.error('Try Again. Please fill all the fields');
     }
   }
 }
