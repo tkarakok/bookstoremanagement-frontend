@@ -3,14 +3,22 @@
     <div class="mb-3">
       <app-navi></app-navi>
       <div class="row">
-          <div class="col-md-4">
+          <div  *ngIf="isLogin" class="col-md-4">
             <app-category></app-category>
             <br>
             <app-author></app-author>
           </div>
-          <div class="col-md-8">
+          <div  *ngIf="isLogin" >
+            <div class="col-md-8">
               <router-outlet></router-outlet>
+            </div>
           </div>
+          <div  *ngIf="!isLogin" >
+            <div class="col-md-12">
+              <router-outlet></router-outlet>
+            </div>
+          </div>
+          
       </div>
     </div>
   </div>

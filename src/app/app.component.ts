@@ -11,6 +11,8 @@ import { CategoryService } from './service/category.service';
 import { AuthorComponent } from './components/author/author/author.component';
 import { AuthorService } from './service/author.service';
 import { CategoryDetailService } from './service/category-detail.service';
+import { RegisterComponent } from './components/register/register/register.component';
+import { RegisterService } from './service/register.service';
 
 @Component({
   selector: 'app-root',
@@ -22,18 +24,21 @@ import { CategoryDetailService } from './service/category-detail.service';
     BookComponent,
     HttpClientModule,
     CategoryComponent,
-    AuthorComponent
+    AuthorComponent,
+    RegisterComponent
   ],
   providers:[
     BookService,
     BookDetailsService,
     CategoryService,
     AuthorService,
-    CategoryDetailService
+    CategoryDetailService,
+    RegisterService
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  isLogin = false;
   title = 'bookstoremanagement';
 }
