@@ -13,6 +13,7 @@ import { AuthorService } from './service/author.service';
 import { CategoryDetailService } from './service/category-detail.service';
 import { RegisterComponent } from './components/register/register/register.component';
 import { RegisterService } from './service/register.service';
+import { ToastrModule } from 'ngx-toastr';
 
 @Component({
   selector: 'app-root',
@@ -25,7 +26,8 @@ import { RegisterService } from './service/register.service';
     HttpClientModule,
     CategoryComponent,
     AuthorComponent,
-    RegisterComponent
+    RegisterComponent,
+    ToastrModule
   ],
   providers:[
     BookService,
@@ -33,7 +35,7 @@ import { RegisterService } from './service/register.service';
     CategoryService,
     AuthorService,
     CategoryDetailService,
-    RegisterService
+    RegisterService,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
