@@ -1,8 +1,9 @@
 <br>
 <div class="container">
   <div class="mb-3">
-    <app-navi></app-navi>
-    <div *ngIf="appService.isLoginSuccess" class="row">
+    
+    <div *ngIf="authservice.isAuthenticated" class="row">
+      <app-navi></app-navi>
       <div class="col-md-4">
         <app-category></app-category>
         <br>
@@ -12,8 +13,8 @@
         <router-outlet></router-outlet>
       </div>
     </div>
-    <div *ngIf="!appService.isLoginSuccess">
-      <div class="col-md-12">
+    <div *ngIf="!authservice.isAuthenticated">
+      <div>
         <router-outlet></router-outlet>
       </div>
     </div>

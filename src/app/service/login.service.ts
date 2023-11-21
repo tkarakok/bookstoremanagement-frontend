@@ -2,6 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { LoginModel } from '../model/loginModel';
 import { ResponseModel } from '../model/responseModel';
+import { SingleResponseModel } from '../model/singleResponseModel';
+import { TokenModel } from '../model/tokenModel';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +15,6 @@ export class LoginService {
 
   login(loginModel:LoginModel){
     let newPath = this.apiUrl + "auth/login";
-    return this.httpClient.post<ResponseModel>(newPath, loginModel);
+    return this.httpClient.post<SingleResponseModel<TokenModel>>(newPath, loginModel);
   }
 }

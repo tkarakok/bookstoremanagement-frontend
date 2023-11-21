@@ -49,8 +49,9 @@ export class LoginComponent implements OnInit {
       this.loginService.login(loginModel).subscribe(
         (response) => {
           this.router.navigate(["/books"]);
+          localStorage.setItem("token", response.data.token);
           this.appService.loginSuccess();
-          this.toastrService.success(response.message);
+          this.toastrService.success("Login Success");
         },
         (responseError) => {
           this.toastrService.error(responseError.error);

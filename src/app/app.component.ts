@@ -16,6 +16,7 @@ import { RegisterService } from './service/register.service';
 import { ToastrModule } from 'ngx-toastr';
 import { LoginComponent } from './components/login/login/login.component';
 import { AppService } from './service/app.service';
+import { AuthService } from './service/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -30,7 +31,7 @@ import { AppService } from './service/app.service';
     AuthorComponent,
     RegisterComponent,
     ToastrModule,
-    LoginComponent
+    LoginComponent,
   ],
   providers:[
     BookService,
@@ -39,16 +40,19 @@ import { AppService } from './service/app.service';
     AuthorService,
     CategoryDetailService,
     RegisterService,
-    AppService
+    AppService,
+    AuthService
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   appService : AppService;
+  authservice : AuthService;
   title = 'bookstoremanagement';
 
-  constructor(private appSer : AppService){
+  constructor(private appSer : AppService , authSer : AuthService){
     this.appService = appSer;
+    this.authservice = authSer;
   }
 }
