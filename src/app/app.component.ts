@@ -17,6 +17,8 @@ import { ToastrModule } from 'ngx-toastr';
 import { LoginComponent } from './components/login/login/login.component';
 import { AppService } from './service/app.service';
 import { AuthService } from './service/auth.service';
+import { EmployeeService } from './service/employee.service';
+import { EmployeeComponent } from './components/employee/employee/employee.component';
 
 @Component({
   selector: 'app-root',
@@ -32,6 +34,7 @@ import { AuthService } from './service/auth.service';
     RegisterComponent,
     ToastrModule,
     LoginComponent,
+    EmployeeComponent
   ],
   providers:[
     BookService,
@@ -41,7 +44,8 @@ import { AuthService } from './service/auth.service';
     CategoryDetailService,
     RegisterService,
     AppService,
-    AuthService
+    AuthService,
+    EmployeeService
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 mb-3 mb-lg-5">
+            <div class="overflow-hidden card table-nowrap table-card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0" style="text-align: center;"><b>EMPLOYEES</b></h5>
+                    <input type="text" class="btn btn-light btn-sm" placeholder="search">
+                </div>
+                <div class="table-responsive">
+                    <table class="table mb-0">
+                        <thead class="small text-uppercase bg-body text-muted">
+                            <tr>
+                                <th>Employee Name</th>
+                                <th>Employee Email</th>
+                                <th>Employee Role</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let Employee of employees" class="align-middle">
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div>
+                                            <div class="h6 mb-0 lh-1">{{Employee.firstName + " " + Employee.lastName}}</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td> <span class="d-inline-block align-middle">{{Employee.email}}</span></td>
+                                <td> <span class="d-inline-block align-middle">{{Employee.claim}}</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
