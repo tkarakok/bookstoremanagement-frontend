@@ -1,11 +1,22 @@
 
-<div class="mb-3">
-    <div class="text-bg-dark p-3" style="text-align: center;"><b>AUTHORS</b></div>
+<div class="container">
+  <div class="row">
+      <div class="col-12 mb-3 mb-lg-5">
+          <div class="overflow-hidden card table-nowrap table-card">
+              <div class="card-header d-flex justify-content-between align-items-center">
+                  <h5 class="mb-0"><b>AUTHORS</b></h5>
+              </div>
+              <div class="table-responsive">
+                  <table class="table mb-0">
+                      <tbody>
+                          <tr *ngFor="let Author of authors" class="align-middle">
+                              <td>{{Author.firstName + " " + Author.lastName}}</td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
   </div>
-  
-  <div class="mb-3">
-      <ul
-      class="list-group">
-          <li *ngFor="let author of authors" class="list-group-item">{{author.firstName +" "+ author.lastName }}</li>
-        </ul>
-  </div>
+</div>
+
