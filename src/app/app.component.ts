@@ -19,6 +19,10 @@ import { AppService } from './service/app.service';
 import { AuthService } from './service/auth.service';
 import { EmployeeService } from './service/employee.service';
 import { EmployeeComponent } from './components/employee/employee/employee.component';
+import { CustomerService } from './service/customer.service';
+import { CustomerComponent } from './components/customer/customer/customer.component';
+import { CustomerAddComponent } from './components/customer-add/customer-add/customer-add.component';
+import { CustomerAddService } from './service/customer-add.service';
 
 @Component({
   selector: 'app-root',
@@ -34,7 +38,9 @@ import { EmployeeComponent } from './components/employee/employee/employee.compo
     RegisterComponent,
     ToastrModule,
     LoginComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    CustomerComponent,
+    CustomerAddComponent
   ],
   providers:[
     BookService,
@@ -45,7 +51,9 @@ import { EmployeeComponent } from './components/employee/employee/employee.compo
     RegisterService,
     AppService,
     AuthService,
-    EmployeeService
+    EmployeeService,
+    CustomerService,
+    CustomerAddService
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

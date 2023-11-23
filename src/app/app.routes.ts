@@ -5,6 +5,8 @@ import { LoginComponent } from './components/login/login/login.component';
 import { CategoryComponent } from './components/category/category/category.component';
 import { AuthorComponent } from './components/author/author/author.component';
 import { EmployeeComponent } from './components/employee/employee/employee.component';
+import { CustomerComponent } from './components/customer/customer/customer.component';
+import { CustomerAddComponent } from './components/customer-add/customer-add/customer-add.component';
 
 export const routes: Routes = [
     {path:"", pathMatch:"full", component:LoginComponent},
@@ -14,4 +16,6 @@ export const routes: Routes = [
     {path:"categories", component:CategoryComponent},
     {path:"authors", component:AuthorComponent},
     {path:"employees", component:EmployeeComponent},
+    {path:"customers", component:CustomerComponent},
+    {path:"customer-add", component:CustomerAddComponent},
 ];
