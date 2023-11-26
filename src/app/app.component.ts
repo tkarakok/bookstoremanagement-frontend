@@ -23,6 +23,7 @@ import { CustomerService } from './service/customer.service';
 import { CustomerComponent } from './components/customer/customer/customer.component';
 import { CustomerAddComponent } from './components/customer-add/customer-add/customer-add.component';
 import { CustomerAddService } from './service/customer-add.service';
+import {MatIconModule} from '@angular/material/icon';
 
 @Component({
   selector: 'app-root',
@@ -40,7 +41,8 @@ import { CustomerAddService } from './service/customer-add.service';
     LoginComponent,
     EmployeeComponent,
     CustomerComponent,
-    CustomerAddComponent
+    CustomerAddComponent,
+    MatIconModule
   ],
   providers:[
     BookService,
@@ -53,7 +55,8 @@ import { CustomerAddService } from './service/customer-add.service';
     AuthService,
     EmployeeService,
     CustomerService,
-    CustomerAddService
+    CustomerAddService,
+    
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
