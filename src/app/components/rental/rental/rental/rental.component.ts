@@ -17,11 +17,12 @@ import { Router } from '@angular/router';
 import { RentalService } from '../../../../service/rental.service';
 import { RentModel } from '../../../../model/rentModel';
 import { ToastrService } from 'ngx-toastr';
+import { CustomerAddComponent } from '../../../customer-add/customer-add/customer-add.component';
 
 @Component({
   selector: 'app-rental',
   standalone: true,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, CustomerAddComponent],
   templateUrl: './rental.component.html',
   styleUrl: './rental.component.css',
   providers:[ToastrService]
