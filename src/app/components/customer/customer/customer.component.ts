@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Customer } from '../../../model/customer';
 import { CustomerService } from '../../../service/customer.service';
 import { Router } from '@angular/router';
+import { AppService } from '../../../service/app.service';
 
 @Component({
   selector: 'app-customer',
@@ -15,7 +16,11 @@ export class CustomerComponent implements OnInit {
 
   customers : Customer[] = [];
   
-  constructor(private customerService : CustomerService, private router: Router) { }
+  constructor(
+    private customerService : CustomerService, 
+    private router: Router,
+    ) { }
+
   ngOnInit(): void {
     this.getCustomer();
   }
@@ -30,5 +35,8 @@ export class CustomerComponent implements OnInit {
   newCustomer(){
     this.router.navigate(["/customer-add"]);
   }
+
+  
+  
 
 }

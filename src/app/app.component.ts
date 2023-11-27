@@ -24,6 +24,8 @@ import { CustomerComponent } from './components/customer/customer/customer.compo
 import { CustomerAddComponent } from './components/customer-add/customer-add/customer-add.component';
 import { CustomerAddService } from './service/customer-add.service';
 import {MatIconModule} from '@angular/material/icon';
+import { RentalService } from './service/rental.service';
+import { RentalComponent } from './components/rental/rental/rental/rental.component';
 
 @Component({
   selector: 'app-root',
@@ -42,7 +44,8 @@ import {MatIconModule} from '@angular/material/icon';
     EmployeeComponent,
     CustomerComponent,
     CustomerAddComponent,
-    MatIconModule
+    MatIconModule,
+    RentalComponent
   ],
   providers:[
     BookService,
@@ -56,7 +59,7 @@ import {MatIconModule} from '@angular/material/icon';
     EmployeeService,
     CustomerService,
     CustomerAddService,
-    
+    RentalService
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

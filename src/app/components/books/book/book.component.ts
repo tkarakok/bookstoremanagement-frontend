@@ -6,6 +6,7 @@ import { BookDetails } from '../../../model/bookDetails';
 import { BookDetailsService } from '../../../service/book-details.service';
 import { MatIconModule } from '@angular/material/icon';
 import { Router } from '@angular/router';
+import { AppService } from '../../../service/app.service';
 
 @Component({
   selector: 'app-book',
@@ -23,7 +24,8 @@ export class BookComponent implements OnInit {
   constructor(
     private bookService: BookService,
     private bookDetailsService: BookDetailsService,
-    private router : Router
+    private router : Router,
+    private appService :  AppService
     ) { }
 
   ngOnInit(): void {
@@ -46,7 +48,12 @@ export class BookComponent implements OnInit {
 
   setSelectedBook(sendBook :BookDetails){
     this.selectedBook = sendBook;
-    // this.router.navigate(["/rental"])
+    
+  }
+
+  openRentalPage(){
+    this.router.navigate(["/rental"]);
+    this.appService.setSelectedBook(this.selectedBook);
   }
 
 }

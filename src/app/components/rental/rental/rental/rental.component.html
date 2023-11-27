@@ -1,18 +1,30 @@
 <body>
-    <div class="parentDiv" >
+    <div class="container" >
         <div id="bookDetails" class="box">
             <form>
                 <fieldset disabled>
-                  <div  class="mb-3">
-                    <label for="disabledTextInput" class="form-label">Book Name</label>
+                  <div  class="mb-6">
+                    <label for="disabledTextInput" class="form-label"><b>Book Name</b></label>
                     <input (select)="selectedBook" placeholder={{selectedBook.bookName}} type="text" id="disabledTextInput" class="form-control">
+                  </div>
+                  <div  class="mb-6">
+                    <label for="disabledTextInput" class="form-label"><b>Daily Price</b></label>
+                    <input (select)="selectedBook" placeholder=${{selectedBook.price}} type="text" id="disabledTextInput" class="form-control">
                   </div>
                 </fieldset>
               </form>
         </div>
+        &nbsp;
         <div id="customerDetails" class="box">
-            b
+          <label for="disabledTextInput" class="form-label"><b>Customer Details</b></label>
+          <select name="selectedCustomer" [(ngModel)]="selectedCustomerEmail" class="form-select" aria-label="Default select example">
+            <option *ngFor="let customer of customers" value={{customer.email}} >{{customer.firstName}} {{customer.lastName}}</option>
+          </select>
+          <br>
+          <button type="button" class="btn btn-success" (click)="rental()">Rent</button> &nbsp;
+          <button type="button" class="btn btn-warning" (click)="registerNewCustomer()">New Customer</button>
         </div>
+        
     </div>
    
 </body>

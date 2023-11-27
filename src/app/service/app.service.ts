@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Book } from '../model/book';
+import { BookDetails } from '../model/bookDetails';
+import { Customer } from '../model/customer';
 
 @Injectable({
   providedIn: 'root'
@@ -7,14 +9,15 @@ import { Book } from '../model/book';
 export class AppService {
 
   isLoginSuccess = false;
-  selectedBook : Book;
+  selectedBook : BookDetails;
+
   constructor() { }
 
   loginSuccess() {
     this.isLoginSuccess = true;
   }
 
-  setSelectedBook(book : Book) {
+  setSelectedBook(book : BookDetails) {
     this.selectedBook = book;
   }
 }
